@@ -58,7 +58,49 @@ namespace leetcode
         }
     }
 
-	class MaxDepthBinaryTreeMySolution
+    /// <summary>
+    /// решение с leetcode, почему то валится на последних тестах
+    /// </summary>
+	class MaxDepthBfs
+    {
+        public int MaxDepth(TreeNode root)
+        {
+            if (root == null)
+                return 0;
+
+            var que = new Queue<TreeNode>();
+            que.Enqueue(root);
+            int depth = 0;
+            TreeNode node = root;
+
+            while (que.Any())
+            {
+                for (int i = 0; i < que.Count; i++)
+                {
+                    node = que.Dequeue();
+
+                    var isRightNodeExists = node.right != null;
+                    var isLeftNodeExists = node.left != null;
+
+                    if (isLeftNodeExists)
+                    {
+                        que.Enqueue(node.left);
+                    }
+                    if (isRightNodeExists)
+                    {
+                        que.Enqueue(node.right);
+
+                    }
+                }
+
+                depth++;
+            }
+
+            return depth;
+        }
+    }
+
+    class MaxDepthBinaryTreeMySolution
 	{
         public int MaxDepth(TreeNode root)
         {
