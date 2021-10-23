@@ -10,7 +10,8 @@ namespace leetcode
 		{
 			var root = MaxDepthSolutions.InitTestCase1();
 			var maxDepthSln = new MaxDepthBinaryTreeMySolution();
-			var testCase1Depth = maxDepthSln.MaxDepth(root);
+			var s = new Squares_of_a_Sorted_Array();
+			var sortedAndSquared = s.SortedSquaresTrivial(Squares_of_a_Sorted_Array.withOne);
 
 			Console.WriteLine("Hello World!");
 		}
