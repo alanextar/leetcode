@@ -6,19 +6,33 @@ namespace xUnitTests
 {
 	public class Squares_of_a_Sorted_Array_Tests
 	{
-		//[Fact]
-		//public void WithOneTest()
-		//{
-		//	var sln = new Squares_of_a_Sorted_Array();
-		//	var copyArr = new int[Squares_of_a_Sorted_Array.withOne.Length];
-		//	Squares_of_a_Sorted_Array.withOne.CopyTo(copyArr, 0);
+		[Fact]
+		public void BigMixedSequenceTest()
+		{
+			var sln = new Squares_of_a_Sorted_Array();
+			var copyArr = new int[Squares_of_a_Sorted_Array.bigMixedSeq.Length];
+			Squares_of_a_Sorted_Array.bigMixedSeq.CopyTo(copyArr, 0);
 
-		//	var myResultedArr = sln.SortedSquares(copyArr);
-		//	var expectedArray = sln.SortedSquaresTrivial(Squares_of_a_Sorted_Array.withOne);
+			var expectedArray = sln.SortedSquaresTrivial(Squares_of_a_Sorted_Array.bigMixedSeq);
+			var myResultedArr = sln.SortedSquares(copyArr);
 
-		//	//Assert.Equal(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 });
-		//	Assert.Equal(expectedArray,myResultedArr);
-		//}
+			//Assert.Equal(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 });
+			Assert.Equal(expectedArray, myResultedArr);
+		}
+
+		[Fact]
+		public void WithOneTest()
+		{
+			var sln = new Squares_of_a_Sorted_Array();
+			var copyArr = new int[Squares_of_a_Sorted_Array.withOne.Length];
+			Squares_of_a_Sorted_Array.withOne.CopyTo(copyArr, 0);
+
+			var myResultedArr = sln.SortedSquares(copyArr);
+			var expectedArray = sln.SortedSquaresTrivial(Squares_of_a_Sorted_Array.withOne);
+
+			//Assert.Equal(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 });
+			Assert.Equal(expectedArray, myResultedArr);
+		}
 
 		[Fact]
 		public void MixedSaSarrayTest()

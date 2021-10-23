@@ -16,6 +16,7 @@ namespace leetcode
 		public static int[] allPositiveWithZero = new int[] { 0, 1, 2, 3, 4 };
 		public static int[] mixedWithDuplicates = new int[] { -10000, -9999, -7, -5, 0, 0, 10000 };
 		public static int[] mixedWithManyDuplicates = new int[] { -10000, -9999, -7, -5, 0, 0, 10000 };
+		public static int[] bigMixedSeq = new int[] { -9, -7, -5, -3, -1, 2, 4, 4, 7, 10 };
 		public static int[] withOne = new int[] { -3, -3, -2, 1 };
 
 		public int[] SortedSquares111(int[] nums)
@@ -64,7 +65,8 @@ namespace leetcode
 			return sortedSquaredArr;
 		}
 
-		public int[] SortedSquares(int[] nums)
+		//public static int[] bigMixedSeq = new int[] { -9, -7, -5, -3, -1, 2, 4, 4, 7, 10 };
+		public int[] SortedSquaresMySolution(int[] nums)
 		{
 			var length = nums.Length;
 			int j = length - 1;
@@ -77,9 +79,15 @@ namespace leetcode
 
 			while (j >= i)
 			{
+				var k = j;
 				if (i == j)
 				{
 					nums[j] = nums[j] * nums[j];
+					while (k < length - 1 && nums[k] > nums[k + 1])
+					{
+						nums.SwapValues(k, k + 1);
+						k++;
+					}
 					break;
 				}
 
@@ -95,10 +103,54 @@ namespace leetcode
 				}
 
 				nums[j] = nums[j] * nums[j];
+				//nums[i] = nums[i] * nums[i];
+				while (k < length - 1 && nums[k] > nums[k + 1])
+				{
+					nums.SwapValues(k, k + 1);
+					k++;
+				}
+
+				//var z = i;
+				//while (z > 0 && nums[z] < nums[z - 1])
+				//{
+				//	nums.SwapValues(z - 1, z);
+				//	z--;
+				//}
+
 				j--;
 			}
 
 			return nums;
+		}
+
+		public int[] SortedSquares(int[] nums)
+		{
+			int first = 0;
+			int second = nums.Length - 1;
+
+			int[] result = new int[second + 1];
+
+			int counter = second;
+			while (counter >= 0)
+			{
+				int fe = nums[first];
+				int se = nums[second];
+
+				if ((fe * fe) > (se * se))
+				{
+					result[counter] = fe * fe;
+					counter--;
+					first++;
+				}
+				else
+				{
+					result[counter] = se * se;
+					counter--;
+					second--;
+				}
+			}
+
+			return result;
 		}
 
 		private int[] SquaredSortedWithSameSign(int[] nums)
