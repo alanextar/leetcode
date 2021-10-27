@@ -8,18 +8,12 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			//var root = MaxDepthSolutions.InitTestCase1();
-			//var maxDepthSln = new MaxDepthBinaryTreeMySolution();
-			//var s = new Squares_of_a_Sorted_Array();
-			//var sortedAndSquared = s.SortedSquaresTrivial(Squares_of_a_Sorted_Array.withOne);
-
-			var mergeSln = new Merge_Intervals();
-			var mergedIntervals =  mergeSln.MergeMySoultion(Merge_Intervals.intervals1);
-			mergedIntervals =  mergeSln.MergeMySoultion(Merge_Intervals.empty);
-			mergedIntervals =  mergeSln.MergeMySoultion(Merge_Intervals.twoInterval);
+			var binarySearchSln = new Binary_Search();
+			var sln1 = binarySearchSln.Search(Binary_Search.nums1, 2);
+			var sln2 = binarySearchSln.Search(Binary_Search.nums2, 5);
+			var sln3 = binarySearchSln.Search(Binary_Search.nums3, 2);
 
 			Console.WriteLine("Hello World!");
 		}
 	}
-
 }
