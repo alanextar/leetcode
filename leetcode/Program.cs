@@ -8,10 +8,12 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			var binarySearchSln = new Binary_Search();
-			var sln1 = binarySearchSln.Search(Binary_Search.nums1, 2);
-			var sln2 = binarySearchSln.Search(Binary_Search.nums2, 5);
-			var sln3 = binarySearchSln.Search(Binary_Search.nums3, 2);
+			var parenthesisSln = new Valid_Parentheses();
+			var isValid1 = parenthesisSln.IsValid(Valid_Parentheses.validCase1);
+			var isValid2 = parenthesisSln.IsValid(Valid_Parentheses.validCase2);
+			var isValid3 = parenthesisSln.IsValid(Valid_Parentheses.inValidCase1);
+			var isValid4 = parenthesisSln.IsValid(Valid_Parentheses.inValidCase2);
+			var isValid5 = parenthesisSln.IsValid(Valid_Parentheses.inValidCase3);
 
 			Console.WriteLine("Hello World!");
 		}
