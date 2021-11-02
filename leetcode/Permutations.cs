@@ -57,4 +57,40 @@ namespace leetcode
         }
         
     }
+
+    //https://leetcode.com/problems/permutations/discuss/586822/C-solution
+    public class LeetcodePermutations
+    {
+        public static int[] threeNumber = Enumerable.Range(1, 3).ToArray();
+        public static int[] fourNumber = Enumerable.Range(1, 4).ToArray();
+        public static int[] fiveNumbers = Enumerable.Range(1, 5).ToArray();
+
+        public IList<IList<int>> Permute(int[] nums)
+        {
+
+            List<IList<int>> res = new List<IList<int>>();
+            Backtracking(nums, new List<int>(), res);
+            return res;
+        }
+
+        private void Backtracking(int[] nums, List<int> list, List<IList<int>> res)
+        {
+            if (list.Count == nums.Length)
+            {
+                res.Add(new List<int>(list));
+                return;
+            }
+            else
+            {
+                for (int i = 0; i < nums.Length; i++)
+                {
+                    if (list.Contains(nums[i]))
+                        continue;
+                    list.Add(nums[i]);
+                    Backtracking(nums, list, res);
+                    list.RemoveAt(list.Count - 1);
+                }
+            }
+        }
+    }
 }
