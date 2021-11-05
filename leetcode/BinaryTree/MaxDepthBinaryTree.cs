@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leetcode.BinaryTree;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,35 +7,8 @@ using System.Threading.Tasks;
 
 namespace leetcode
 {
-    public static class MaxDepthSolutions
-	{
-        public static TreeNode InitTestCase1()
-        {
-            //root = [3, 9, 20, null, null, 15, 7]
-            TreeNode root = new TreeNode(3);
-            root.left = new TreeNode(9);
-            root.right = new TreeNode(20);
-            root.right.left = new TreeNode(15);
-            root.right.right = new TreeNode(7);
 
-            return root;
-        }
-
-        public static TreeNode InitTestCase2()
-        {
-            TreeNode root = new TreeNode(3);
-            root.right = new TreeNode(2);
-
-            return root;
-        }
-
-        public static TreeNode InitTestCase3()
-        {
-            return null;
-        }
-    }
-
-	class MaxDepthBinaryTree
+    class MaxDepthBinaryTree
 	{
         int max = 0;
 
@@ -151,20 +125,6 @@ namespace leetcode
             }
 
             return maxDepth;
-        }
-    }
-
-    public class TreeNode
-    {
-        public int val { get; set; }
-        public TreeNode left { get; set; }
-        public TreeNode right { get; set; }
-
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 }

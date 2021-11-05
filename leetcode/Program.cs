@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leetcode.BinaryTree;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,10 +9,13 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			var permutations = new LeetcodePermutations();
-			var result1 = permutations.Permute(LeetcodePermutations.threeNumber);
-			//var result2 = permutations.Permute(Permutations.fourNumber);
-			//var result3 = permutations.Permute(Permutations.fiveNumbers);
+			var arr1 = new int?[] { 1, 3, 2, 5 };
+			var arr2 = new int?[] { 2, 1, 3, null, 4, null, 7 };
+			var t1 = new TreeNode(arr1);
+			var t2 = new TreeNode(arr2);
+			var mergeTreeSln = new MergeBinaryTrees();
+			var merged = mergeTreeSln.MergeTrees(t1, t2);
+
 
 			Console.WriteLine("Hello World!");
 		}
