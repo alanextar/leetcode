@@ -187,7 +187,7 @@ namespace leetcode
 				nums[i] = nums[i] * nums[i];
 			}
 
-			Array.Sort(nums, 0, nums.Length);
+			System.Array.Sort(nums, 0, nums.Length);
 
 			return nums;
 		}

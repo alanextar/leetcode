@@ -27,7 +27,7 @@ namespace leetcode
 			var length = intervals.Length;
 			var result = new int[length][];
 
-			Array.Sort(intervals, new ArrayComparer());
+			System.Array.Sort(intervals, new ArrayComparer());
 
 			int[] mergeRequest = null;
 			var isMerged = false;

@@ -23,7 +23,7 @@ namespace leetcode
                 }
             }
 
-            return Array.Empty<int>();
+            return System.Array.Empty<int>();
         }
     }
 }

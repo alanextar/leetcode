@@ -19,7 +19,6 @@ namespace leetcode
             result = new List<IList<int>>();
             var left = nums.Length - 4;
             origin = new int[nums.Length];
-            Array.Copy(nums, origin, nums.Length);
 
             while (left >= 0)
             {
@@ -44,7 +43,7 @@ namespace leetcode
             for (int i = nums.Length - 3 ; i < nums.Length; i++)
             {
                 var newArr = new int[nums.Length];
-                Array.Copy(nums, newArr, nums.Length);
+                System.Array.Copy(nums, newArr, nums.Length);
                 if (i > nums.Length - 3)
                 {
                     newArr.SwapValues(nums.Length - 3, i);
