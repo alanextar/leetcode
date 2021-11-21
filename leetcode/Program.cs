@@ -53,6 +53,14 @@ namespace leetcode
 			reverseSln.ReverseString(arr2);
 			reverseSln.ReverseString(arr3);
 
+			var longestSln = new Longest_Substring_Without_Repeating_Characters();
+			var str1 = "abcabcbb";
+			var str3 = "pwwkew";
+			var str2 = " ";
+			var result1 = longestSln.LongestSubstringWithoutRepeatingCharacters(str1);
+			var result2 = longestSln.LongestSubstringWithoutRepeatingCharacters(str2);
+			var result3 = longestSln.LongestSubstringWithoutRepeatingCharacters(str3);
+
 			Console.WriteLine("Hello World!");
 		}
 	}
