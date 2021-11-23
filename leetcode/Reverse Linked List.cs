@@ -18,23 +18,20 @@ namespace leetcode
             var stack = new Stack<ListNode>();
             var current = head;
 
-            while (current != null)
+            while (current.next != null)
             {
                 stack.Push(current);
                 current = current.next;
             }
 
-            ListNode nextNode = new ListNode();
-            head = nextNode;
+            head = current;
             while (stack.Count > 0)
             {
-                nextNode.val = stack.Pop().val;
-                if (stack.Count > 0)
-                {
-                    nextNode.next = new ListNode();
-                    nextNode = nextNode.next;
-                }
+                current.next = stack.Peek();
+                stack.Pop();
+                current = current.next;
             }
+            current.next = null;
 
             return head;
         }
