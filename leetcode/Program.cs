@@ -12,14 +12,38 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			var reverseLinkedList = new Remove_Duplicates_from_Sorted_List();
-			var thirdNode = new ListNode() { val = 3 };
-			var secondNode = new ListNode() { val = 1 };
-			var first = new ListNode() { val = 1 };
-			first.next = secondNode;
-			secondNode.next = thirdNode;
+			var l1 = new ListNode { val = 2, next = new ListNode { val = 4, next = new ListNode { val = 3 } } };
+			var l2 = new ListNode { val = 5, next = new ListNode { val = 6, next = new ListNode { val = 4 } } };
+			var addTwoNumbers = new Add_Two_Numbers().AddTwoNumbers(l1, l2);
 
-			reverseLinkedList.DeleteDuplicates(first);
+			var l11 = new ListNode();
+			var l22 = new ListNode();
+			var addTwoNumbers2 = new Add_Two_Numbers().AddTwoNumbers(l11, l22);
+
+			var l111 = new ListNode { val = 9, 
+				next = new ListNode { val = 9, 
+					next = new ListNode { val = 9, 
+						next = new ListNode { val = 9, 
+							next = new ListNode { val = 9, 
+								next = new ListNode { val = 9, 
+									next = new ListNode { val = 9 } 
+								} 
+							} 
+						} 
+					} 
+				} 
+			};
+
+			var l222 = new ListNode { val = 9, 
+				next = new ListNode { val = 9, 
+					next = new ListNode { val = 9, 
+						next = new ListNode { val = 9, 
+						} 
+					} 
+				} 
+			};
+
+			var addTwoNumbers3 = new Add_Two_Numbers().AddTwoNumbers(l111, l222);
 
 			Console.WriteLine("Hello World!");
 		}
