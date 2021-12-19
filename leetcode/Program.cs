@@ -1,6 +1,7 @@
 ﻿using leetcode.Array;
 using leetcode.BinaryTree;
 using leetcode.LinkedList;
+using leetcode.StackQueue;
 using leetcode.String;
 using System;
 using System.Collections.Generic;
@@ -12,38 +13,15 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			var l1 = new ListNode { val = 2, next = new ListNode { val = 4, next = new ListNode { val = 3 } } };
-			var l2 = new ListNode { val = 5, next = new ListNode { val = 6, next = new ListNode { val = 4 } } };
-			var addTwoNumbers = new Add_Two_Numbers().AddTwoNumbers(l1, l2);
-
-			var l11 = new ListNode();
-			var l22 = new ListNode();
-			var addTwoNumbers2 = new Add_Two_Numbers().AddTwoNumbers(l11, l22);
-
-			var l111 = new ListNode { val = 9, 
-				next = new ListNode { val = 9, 
-					next = new ListNode { val = 9, 
-						next = new ListNode { val = 9, 
-							next = new ListNode { val = 9, 
-								next = new ListNode { val = 9, 
-									next = new ListNode { val = 9 } 
-								} 
-							} 
-						} 
-					} 
-				} 
-			};
-
-			var l222 = new ListNode { val = 9, 
-				next = new ListNode { val = 9, 
-					next = new ListNode { val = 9, 
-						next = new ListNode { val = 9, 
-						} 
-					} 
-				} 
-			};
-
-			var addTwoNumbers3 = new Add_Two_Numbers().AddTwoNumbers(l111, l222);
+			var minStack = new MinStack();
+			minStack.Push(0);
+			minStack.Push(1);
+			minStack.Push(0);
+            Console.WriteLine(minStack.GetMin());
+			minStack.Pop();
+            //Console.WriteLine(minStack.Top());
+            Console.WriteLine(minStack.GetMin());
+			
 
 			Console.WriteLine("Hello World!");
 		}
