@@ -13,15 +13,8 @@ namespace leetcode
 	{
 		static void Main(string[] args)
 		{
-			var minStack = new MinStack();
-			minStack.Push(0);
-			minStack.Push(1);
-			minStack.Push(0);
-            Console.WriteLine(minStack.GetMin());
-			minStack.Pop();
-            //Console.WriteLine(minStack.Top());
-            Console.WriteLine(minStack.GetMin());
-			
+			//var profit = new Best_Time_to_Buy_and_Sell_Stock_121().MaxProfit(new int[] { 3, 2, 6, 5, 0, 3 });
+			var profit = new Best_Time_to_Buy_and_Sell_Stock_121().MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
 
 			Console.WriteLine("Hello World!");
 		}
