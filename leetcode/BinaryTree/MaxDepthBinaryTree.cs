@@ -97,7 +97,6 @@ namespace leetcode
                 {
                     nodesStack.Push(root.right);
                     depthDictionary.Add(root.right, depth);
-
                 }
                 if (isLeftNodeExists)
                 {
