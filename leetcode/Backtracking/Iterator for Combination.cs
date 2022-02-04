@@ -6,6 +6,23 @@ using System.Threading.Tasks;
 
 namespace leetcode.Bitmask
 {
+    public static class CombinationIteratorProgram
+    {
+        public static void CombinationIteratorProgramMain(string[] args)
+        {
+            CombinationIterator iterator;
+            //iterator = new CombinationIterator("bvwz", 2);
+            iterator = new CombinationIterator("abc", 2);
+            iterator.Next();
+            iterator.HasNext();
+            iterator.Next();
+            iterator.Next();
+            iterator.Next();
+
+            Console.WriteLine("Hello World!");
+        }
+    }
+
     public class CombinationIterator
     {
         private List<string> _comb = new List<string>();
@@ -14,7 +31,7 @@ namespace leetcode.Bitmask
         public CombinationIterator(string characters, int combinationLength)
         {
             _comb = GenaretAllComb(characters, combinationLength);
-            _comb.Sort();
+            //_comb.Sort();
         }
 
         public string Next()
@@ -49,7 +66,8 @@ namespace leetcode.Bitmask
                     num >>= 1;
                 }
 
-                if (comString.Length == len) hold.Add(comString);
+                //if (comString.Length == len) 
+                    hold.Add(comString);
                 comString = "";
             }
             return hold;
