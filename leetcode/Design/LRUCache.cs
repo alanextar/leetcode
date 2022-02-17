@@ -8,7 +8,7 @@ namespace leetcode.Design
 {
     public class LRUCacheProgram
     {
-        public static void Main()
+        public static void LRUMain()
         {
             LRUCache lRUCache = new LRUCache(2);
             lRUCache.Put(2, 1); // cache is {1=1}
