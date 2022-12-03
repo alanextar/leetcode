@@ -14,9 +14,8 @@ namespace leetcode.Graph
 
         public bool CanFinish(int numCourses, int[][] prerequisites)
         {
-            _courses = new List<Course>();
-            _visitedCourses = new List<int>();
-            _visited = new bool[numCourses];
+            _courses = new List<Course>(numCourses);
+            _visitedCourses = new List<int>(numCourses);
 
             for (int i = 0; i < numCourses; i++)
             {
@@ -25,7 +24,7 @@ namespace leetcode.Graph
                 foreach (var item in deps)
                 {
                     course.Deps.Add(item[1]);
-                }
+                } 
 
                 _courses.Add(course);
             }
@@ -69,7 +68,7 @@ namespace leetcode.Graph
 
     public static class Program210
     {
-        public static void Main(string[] args)
+        public static void Main210(string[] args)
         {
             var sln = new Solution();
             var res = sln.CanFinish(2, new int[][] { new int[] { 1, 0 }, new int[] { 0, 1 } });
