@@ -23,7 +23,7 @@ namespace leetcode.String
                 charCountGr1.Select(g => g.Count).OrderBy(v => v).SequenceEqual(charCountGr2.Select(g => g.Count).OrderBy(v => v));
         }
 
-        public static void Main(string[] args)
+        public static void Maind(string[] args)
         {
             var s = new Determine_if_Two_Strings_Are_Close();
             Assert.AreEqual(true, s.CloseStrings("cabbba", "abbccc"));
