@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace leetcode.Array
 {
+    //https://leetcode.com/problems/minimum-average-difference/discussion/
+
     public class _2256
     {
         public int MinimumAverageDifference(int[] nums) {
@@ -42,7 +44,7 @@ namespace leetcode.Array
 
     public static class Program2256
     {
-        public static void Main(string[] args)
+        public static void Main2256(string[] args)
         {
             var s = new _2256();
 
